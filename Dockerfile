@@ -4,7 +4,6 @@ WORKDIR /opt/node_app
 
 COPY . .
 
-RUN npm install && \
-    npm run build
+RUN /bin/sh -c "npm install && npm run build"
 
 CMD ["node", "index.js"]
