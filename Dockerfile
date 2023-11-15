@@ -1,9 +1,10 @@
-FROM node:18-alpine AS build
+FROM node:14-alpine AS build
 
 WORKDIR /opt/node_app
 
-COPY . .
+COPY package.json yarn.lock ./
+RUN yarn --ignore-optional --network-timeout 600000
 
-RUN /bin/sh -c "npm install && npm run build"
+COPY . .
 
 CMD ["node", "index.js"]
