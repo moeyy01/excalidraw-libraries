@@ -18,5 +18,8 @@
     "format:python": "black .",
     "postinstall": "pip install --upgrade google-api-python-client oauth2client black",
     "validate:libraries": "node ./scripts/validate-libraries.js"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.0"
   }
 }
