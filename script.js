@@ -218,7 +218,7 @@ const populateLibraryList = (filterQuery = "") => {
   }
   const template = document.getElementById("template");
   const searchParams = new URLSearchParams(location.search);
-  const referrer = searchParams.get("referrer") || "https://excalidraw.com";
+  const referrer = searchParams.get("referrer") || "https://moeyy.cn/excalidraw/";
   const appName = getAppName(referrer);
   const target = decodeURIComponent(searchParams.get("target") || "_blank");
   const useHash = searchParams.get("useHash");
